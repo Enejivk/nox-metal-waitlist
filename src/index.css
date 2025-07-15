@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Diagonal glowing lines */
+.diagonal-line-1 {
+  position: absolute;
+  bottom: -10%;
+  left: -10%;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(45deg, transparent, #3b82f6, #8b5cf6, transparent);
+  transform: rotate(45deg);
+  animation: glow-flow-1 4s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+.diagonal-line-2 {
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(-45deg, transparent, #8b5cf6, #3b82f6, transparent);
+  transform: rotate(-45deg);
+  animation: glow-flow-2 4s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+@keyframes glow-flow-1 {
+  0%, 100% {
+    opacity: 0.3;
+    filter: blur(1px);
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    opacity: 0.8;
+    filter: blur(0px);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 40px rgba(139, 92, 246, 0.4);
+  }
+}
+
+@keyframes glow-flow-2 {
+  0%, 100% {
+    opacity: 0.3;
+    filter: blur(1px);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+  }
+  50% {
+    opacity: 0.8;
+    filter: blur(0px);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.8), 0 0 40px rgba(59, 130, 246, 0.4);
+  }
+}
+
+/* Enhanced backdrop blur for better glass effect */
+.backdrop-blur-md {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: all 0.2s ease;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Form input focus glow effect */
+input:focus {
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+/* Button hover glow */
+button:hover:not(:disabled) {
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.4));
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .diagonal-line-1,
+  .diagonal-line-2 {
+    width: 60%;
+    opacity: 0.4;
+  }
+}
