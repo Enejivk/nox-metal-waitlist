@@ -2,15 +2,6 @@
 
 A modern, responsive waitlist landing page for Nox Metals, built with React, TypeScript, and Vite. This project features a beautiful glassmorphism UI, animated backgrounds, and form validation for collecting early access signups.
 
-## Features
-
-- **Modern UI**: Glassmorphism card, animated diagonal lines, and gradient backgrounds.
-- **Responsive Design**: Mobile-friendly and visually appealing on all devices.
-- **Form Validation**: Real-time validation for full name and email fields, with clear error messages.
-- **Loading State**: Animated spinner and disabled button during submission.
-- **Success Feedback**: Confirmation message with icon after successful submission.
-- **Branding**: Company logo and Y Combinator badge included.
-
 ## Tech Stack
 
 - [React](https://react.dev/) (with hooks)
@@ -64,21 +55,4 @@ A modern, responsive waitlist landing page for Nox Metals, built with React, Typ
 4. **Open in browser**
    Visit [http://localhost:5173](http://localhost:5173) (or the port shown in your terminal).
 
-## Customization
 
-- **Logo**: Replace `src/assets/10001.png` with your own logo.
-- **Branding**: Edit text in `App.tsx` for your company name, description, and badge.
-- **API Integration**: Replace the simulated API call in `handleSubmit` with your backend endpoint.
-
-## Deployment
-
-You can deploy this app to Vercel, Netlify, or any static hosting provider. Build with:
-```bash
-npm run build
-```
-The output will be in the `dist/` folder.
-
-## License
-
-This project is for demonstration and hiring purposes. Please contact the author for production use.
----
