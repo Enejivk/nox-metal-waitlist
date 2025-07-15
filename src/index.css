@@ -35,6 +35,22 @@
   opacity: 0.6;
 }
 
+
+/* Chrome, Safari, Edge */
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px rgba(23,23,23,0.95) inset !important; /* match your bg color */
+  -webkit-text-fill-color: #fff !important; /* match your text color */
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Firefox */
+input:-moz-autofill {
+  box-shadow: 0 0 0 1000px rgba(23,23,23,0.95) inset !important;
+  -moz-text-fill-color: #fff !important;
+}
 @keyframes glow-flow-1 {
   0%, 100% {
     opacity: 0.3;
